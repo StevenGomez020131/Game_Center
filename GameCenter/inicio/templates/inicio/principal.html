@@ -5,13 +5,16 @@
 <title>{% block titulo %} {% endblock %}</title>
 {%load static%}
 <link href="{% static 'inicio/css/pagina.css' %}" rel="stylesheet" type="text/css">
+
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
 </head>
 <body>
 <!--MENÚ-->
 <div class="navbar">
     <div class="navbar-logo">
+        <a href="{%url 'Inicio'%}">
         <img src="{% static 'inicio/images/logo.png' %}" style="height: 60px;" alt="Logo">
+        </a>
     </div>
     <div class="navbar-links">
         <a href="{%url 'Inicio'%}">Inicio</a>
@@ -20,8 +23,8 @@
         <a href="{%url 'Contacto'%}">Acerca de nosotros</a>
     </div>
     <div class="navbar-cart">
-       
-            <img src="{% static 'inicio/images/carrito.png' %}" style="height: 30px;" alt="Carrito de compra">
+        <a href="#">
+            <img  src="{% static 'inicio/images/carrito.png' %}" style="height: 30px;" alt="Carrito de compra">
         </a>
     </div>
     <div class="navbar-login">
