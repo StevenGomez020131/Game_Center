@@ -3,12 +3,36 @@
 <head>
 
 <title>{% block titulo %} {% endblock %}</title>
-
+{%load static%}
+<link href="{% static 'inicio/css/pagina.css' %}" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
 </head>
 <body>
 <!--MENÚ-->
-<a href="/">Home</a>
-<a href="/contacto">Contactanos</a>
+<div class="navbar">
+    <div class="navbar-logo">
+        <img src="{% static 'inicio/images/logo.png' %}" style="height: 60px;" alt="Logo">
+    </div>
+    <div class="navbar-links">
+        <a href="{%url 'Inicio'%}">Inicio</a>
+        <a href="{%url 'Productos'%}">Productos</a>
+        <a href="{%url 'Blog'%}">Blog</a>
+        <a href="{%url 'Contacto'%}">Acerca de nosotros</a>
+    </div>
+    <div class="navbar-cart">
+       
+            <img src="{% static 'inicio/images/carrito.png' %}" style="height: 30px;" alt="Carrito de compra">
+        </a>
+    </div>
+    <div class="navbar-login">
+        <button>Iniciar sesión</button>
+    </div>
+</div>
+
+<div style="padding: 20px;">
+
+
+
 <!-- CONTENIDO -->
 {% block contenido %} <!--Template Tag-->
 <!--block sirve para indicar que colocaremos un bloque de

@@ -11,3 +11,11 @@ def inicio(request):
 def contacto(request):
 
     return render(request, "inicio/contacto.html")
+
+def productos(request):
+
+    return render(request, "inicio/productos.html")
+
+def blog(request):
+
+    return render(request, "inicio/blog.html")
