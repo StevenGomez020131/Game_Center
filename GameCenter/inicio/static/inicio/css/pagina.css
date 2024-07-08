@@ -1,11 +1,13 @@
 /* Estilos generales */
 /* Estilos para el navbar */
 body {
-    background-color: #13072E; /* Cambia el color de fondo del body */
-    
+    background-color: #13072E; /* Color de fondo del body */
+    color: white; /* Color de texto para todo el body */
+    margin: 0;
 }
 
 .navbar {
+    
     overflow: hidden;
     background-color: #1a0c3d;
     padding: 10px 20px;
@@ -15,6 +17,7 @@ body {
     align-items: center;
     position: relative;
     border-bottom: 1px solid #888888;
+    
 }
 
 
@@ -69,3 +72,4 @@ button {
 button:hover {
     background-color: #FFD84D;
 }
+
