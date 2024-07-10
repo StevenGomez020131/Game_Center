@@ -17,12 +17,20 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from inicio import views
+from django.conf import settings
+from productos import views as views_productos
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path("",views.inicio, name="Inicio"),
     path("contacto/",views.contacto, name="Contacto"),
     path("productos/",views.productos, name="Productos"),
-    path("blog/",views.blog, name="Blog" )
+    path("blog/",views.blog, name="Blog" ),
+    path("carrito/",views.carrito, name="Carrito")
 
 ]
+if settings.DEBUG:
+
+    from django.conf.urls.static import static 
+    urlpatterns += static(settings.MEDIA_URL,
+        document_root=settings.MEDIA_ROOT)
