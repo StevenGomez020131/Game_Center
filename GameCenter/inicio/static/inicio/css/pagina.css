@@ -1,0 +1,204 @@
+/* Estilos generales */
+/* Estilos para el navbar */
+body {
+    background-color: #13072E; /* Color de fondo del body */
+    color: white; /* Color de texto para todo el body */
+    margin: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    max-width: 900px;
+    padding: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.795); /* Sombra normal */
+    border-radius: 10px;
+    margin: 20px auto; /* Ajuste para centrar el contenido */
+    background-color: #0A031C;
+}
+
+.texto-promocion {
+    text-align: center;
+    flex: 1;
+}
+
+.texto-promocion h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.boton-catalogo {
+    background-color: #FFC30F;
+    color: rgb(0, 0, 0);
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    cursor: pointer;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.boton-catalogo:hover {
+    background-color: #FFD84D;
+}
+
+.imagen-promocion {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    flex: 1;
+    margin-left: 20px; /* Espacio entre la imagen y el texto */
+}
+
+.navbar {
+    overflow: hidden;
+    background-color: #1a0c3d;
+    padding: 10px 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    border-bottom: 1px solid #888888;
+}
+
+.navbar-logo img {
+    height: 40px; /* Ajusta la altura según tu necesidad */
+}
+
+.navbar-links {
+    display: flex;
+    justify-content: flex-start; /* Alinea los enlaces a la izquierda */
+}
+
+.navbar-links a {
+    color: white;
+    text-decoration: none;
+    padding: 14px 20px;
+    display: inline-block;
+    font-size: 16px;
+}
+
+.navbar-links a:hover {
+    background-color: #FFC30F;
+    color: black;
+}
+
+.navbar-cart {
+    display: flex;
+    align-items: center;
+    margin-right: 20px; /* Ajusta el espacio entre el carrito y el botón de inicio de sesión */
+    margin-left: auto; /* Mueve el carrito y el botón de inicio de sesión a la derecha */
+}
+
+.navbar-cart img {
+    height: 20px; /* Ajusta el tamaño del icono del carrito */
+    margin-right: 10px; /* Ajusta el espacio entre el icono y los otros enlaces */
+}
+
+.navbar-login {
+    margin-left: 20px;
+}
+
+button {
+    font-size: 11px;
+    padding: 10px 20px;
+    background-color: #FFC30F;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #FFD84D;
+}
+
+.flecha {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2em;
+    color: white;
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 10px;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+}
+
+.flecha:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.izquierda {
+    left: 10px;
+}
+
+.derecha {
+    right: 10px;
+}
+
+.formulario-contacto {
+    background-color: #1a0c3d;
+    padding: 30px;
+    border-radius: 10px;
+    margin-top: 30px;
+    width: 100%;
+    max-width: 600px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.formulario-contacto h2 {
+    color: white;
+    font-size: 2.5em;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.formulario-contacto form {
+    display: flex;
+    flex-direction: column;
+}
+
+.formulario-contacto .campo {
+    margin-bottom: 20px;
+}
+
+.formulario-contacto label {
+    color: white;
+    font-size: 1.2em;
+    margin-bottom: 8px;
+}
+
+.formulario-contacto input,
+.formulario-contacto textarea {
+    padding: 10px;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+}
+
+.formulario-contacto textarea {
+    resize: vertical;
+}
+
+.formulario-contacto button {
+    font-size: 1.2em;
+    padding: 10px 20px;
+    background-color: #FFC30F;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.formulario-contacto button:hover {
+    background-color: #FFD84D;
+}
