@@ -20,3 +20,9 @@ def blog(request):
 def carrito(request):
     return render(request, "inicio/carrito.html")
 
+def accesoriosGeneral(request):
+    return render(request, "inicio/accesoriosGeneral.html")
+
+def juegosGeneral(request):
+    return render(request, "inicio/juegosGeneral.html")
+

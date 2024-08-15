@@ -38,7 +38,8 @@ body {
 .imagen-promocion img,
 .texto-promocion img {
     height: 200px; /* Tamaño deseado para las imágenes */
-    border-radius: 10px; /* Borde redondeado */
+    border-radius: 10px;
+    
 }
 
 /* Estilos para los botones debajo de las imágenes */

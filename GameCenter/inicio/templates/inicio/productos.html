@@ -1,25 +1,29 @@
-{%extends "inicio/principal.html"%}
-{% block titulo %}Productos {% endblock %}
-
+{%extends "inicio/principal.html"%} {% block titulo %}Productos {% endblock %}
 {% block contenido %}
-<h1 style="text-align: center; padding-bottom: 15px;">Productos</h1>
+<h1 style="text-align: center; padding-bottom: 15px">Productos</h1>
 <div class="container">
-    <div class="imagen-promocion">
-        <img src="https://gmedia.playstation.com/is/image/SIEPDC/playstation-accessories-keyart-01-en-24mar22?$facebook$" alt="Imagen 1"  style=" height: 200px;">
-        <div class="botones" style="padding-left: 10px; padding-top: 50px;" >
-            <button>Accesorios</button>
-           
-        </div>
+  <div class="imagen-promocion">
+    <img
+      src="https://cdn.dribbble.com/users/1518937/screenshots/3166591/xbox_controller.gif"
+      alt="Imagen 1"
+      style="height: 200px"
+    />
+    <div class="botones" style="padding-left: 10px; padding-top: 50px">
+        <a href="{% url 'AccesoriosGeneral' %}">
+        <button>Accesorios</button>
     </div>
-    <div class="imagen-promocion">
-        <img src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExaWU2bnh2cGZtOWJrN284dG13ZmYzaG1wMHlzcWJmeGk3djhrOW82OCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/ysHOgpVbSoU9QlHXOU/giphy.webp" alt="Imagen 2" style=" height: 200px;">
-        <div class="botones" style="padding-left: 10px; padding-top: 50px;">
-            <button>Juegos</button>
-           
-        </div>
+  </div>
+  <div class="imagen-promocion">
+    <img
+      src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExaWU2bnh2cGZtOWJrN284dG13ZmYzaG1wMHlzcWJmeGk3djhrOW82OCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/ysHOgpVbSoU9QlHXOU/giphy.webp"
+      alt="Imagen 2"
+      style="height: 200px"
+    />
+    <div class="botones" style="padding-left: 10px; padding-top: 50px">
+      <a href="{% url 'JuegosGeneral' %}">
+      <button>Juegos</button>
     </div>
+  </div>
 </div>
-
-    
 
 {%endblock%}
