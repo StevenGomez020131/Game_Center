@@ -29,6 +29,7 @@ urlpatterns = [
     path("carrito/",views.carrito, name="Carrito"),
     path("accesoriosGeneral/", views.accesoriosGeneral, name="AccesoriosGeneral"),
     path("juegosGeneral/",views.juegosGeneral, name="JuegosGeneral"),
+    path("formulario/", views.formulario, name= "Formulario" ),
 
 ]
 if settings.DEBUG:

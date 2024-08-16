@@ -26,3 +26,6 @@ def accesoriosGeneral(request):
 def juegosGeneral(request):
     return render(request, "inicio/juegosGeneral.html")
 
+def formulario(request):
+    return render(request, "inicio/formulario.html")
+

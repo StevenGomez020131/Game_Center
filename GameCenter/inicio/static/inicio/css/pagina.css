@@ -130,7 +130,21 @@ button:hover {
     background-color: #FFD84D;
 }
 
-/* Estilos para la flecha de navegación */
+.blog {
+    position: relative; /* Permite el posicionamiento absoluto de las flechas dentro del contenedor */
+    overflow: hidden; /* Asegura que el contenido no se desborde fuera del contenedor */
+    width: 100%;
+    max-width: 100%; /* Asegura que el contenedor no sea más ancho que su contenedor padre */
+}
+
+/* Estilos para la imagen dentro del contenedor del blog */
+.blog img {
+    width: 100%; /* Hace que la imagen ocupe todo el ancho del contenedor */
+    height: auto; /* Mantiene la proporción de la imagen */
+    display: block; /* Elimina el espacio debajo de la imagen */
+}
+
+/* Estilos para las flechas de navegación */
 .flecha {
     position: absolute;
     top: 50%;
@@ -142,18 +156,19 @@ button:hover {
     padding: 10px;
     border-radius: 50%;
     transition: background-color 0.3s ease;
+    z-index: 10; /* Asegura que las flechas estén por encima de la imagen */
 }
 
 .flecha:hover {
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(255, 255, 255, 0.7);
 }
 
 .izquierda {
-    left: 10px;
+    left: 10px; /* Ajusta la distancia desde el borde izquierdo del contenedor */
 }
 
 .derecha {
-    right: 10px;
+    right: 10px; /* Ajusta la distancia desde el borde derecho del contenedor */
 }
 
 /* Estilos para el formulario de contacto */
@@ -165,6 +180,7 @@ button:hover {
     width: 100%;
     max-width: 600px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 20px auto; /* Centra el formulario */
 }
 
 .formulario-contacto h2 {
@@ -187,6 +203,7 @@ button:hover {
     color: white;
     font-size: 1.2em;
     margin-bottom: 8px;
+    display: block; /* Asegura que el label ocupe toda la línea */
 }
 
 .formulario-contacto input,
@@ -195,6 +212,7 @@ button:hover {
     font-size: 1em;
     border: none;
     border-radius: 5px;
+    width: 100%; /* Asegura que los campos de entrada ocupen todo el ancho del contenedor */
 }
 
 .formulario-contacto textarea {
