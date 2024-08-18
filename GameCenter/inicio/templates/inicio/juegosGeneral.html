@@ -1,5 +1,6 @@
 {%extends "inicio/principal.html"%} {% block titulo %}Productos {% endblock %}
 {% block contenido %}
+<h1 style="text-align: center; padding-bottom: 15px">Juegos</h1>
 <div class="container">
   <!-- Sección de imágenes y botones -->
   <div class="imagen-promocion">
@@ -10,7 +11,7 @@
     />
     <div class="botones">
     <a href="{% url 'JuegosXbox' %}">
-      <button>Botón 1</button>
+      <button>Juegos Xbox</button>
     </a>
     </div>
   </div>
@@ -21,27 +22,33 @@
       style="height: 100px"
     />
     <div class="botones">
-      <button>Botón 2</button>
+    <a href="{% url 'JuegosPlayStation' %}">
+      <button>Juegos PlayStation</button>
+    </a>
     </div>
   </div>
   <div class="imagen-promocion">
     <img
       src="https://i.gifer.com/origin/20/202ac1347865d0646c7228d9711cba93_w200.gif"
       alt="Imagen 3"
-      style="height: 150px"
+      style="height: 105px"
     />
     <div class="botones">
-      <button>Botón 3</button>
+    <a href="{% url 'JuegosNintendo' %}">
+      <button>Juegos Nintendo</button>
+    </a>
     </div>
   </div>
   <div class="imagen-promocion">
     <img
-      src="https://media.tenor.com/FJQJzNAuTqkAAAAM/loading-microsoft-windows.gif"
+      src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExNjFxcDZia2xiMDNhaWVrbnl4OHI1N2J3bWcwM2Y5YzBudHdwb2d0ZCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/hJaQNVrOPC4Ja/giphy.webp"
       alt="Imagen 4"
-      style="height: 200px"
+      style="height: 105px"
     />
     <div class="botones">
-      <button>Botón 4</button>
+      <a href="{% url 'JuegosPC' %}">
+        <button>Juegos PC</button>
+      </a>
     </div>
   </div>
 </div>

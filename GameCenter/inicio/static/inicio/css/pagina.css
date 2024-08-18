@@ -236,12 +236,9 @@ button:hover {
 }
 
 .container_card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    max-width: 900px;
-    padding: 20px;
+    max-width: 1200px;
     margin: 20px auto; /* Ajuste para centrar el contenido */
+    padding: 20px;
 }
 
 /* Estilos para la fila y columnas */
@@ -251,11 +248,6 @@ button:hover {
     gap: 20px; /* Espacio entre los cards */
 }
 
-.col-sm-6 {
-    flex: 1;
-    max-width: 100%; /* Asegura que las columnas se adapten al ancho del contenedor */
-}
-
 /* Estilos para el card */
 .card {
     background-color: #0A031C; /* Fondo del card */
@@ -263,11 +255,24 @@ button:hover {
     border-radius: 10px; /* Bordes redondeados */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra */
     overflow: hidden; /* Asegura que el contenido no se desborde */
+    border: 1px solid #1a0c3d; /* Borde para mejorar la separación visual */
+    transition: transform 0.3s ease; /* Suaviza la transición al pasar el ratón */
+}
+
+.card:hover {
+    transform: scale(1.02); /* Aumenta ligeramente el tamaño al pasar el ratón */
+}
+
+/* Estilos para la imagen del card con clase card_imagen */
+.card_imagen {
+    width: 100%; /* Asegura que la imagen ocupe todo el ancho de la tarjeta */
+    height: 200px; /* Ajusta la altura de la imagen */
+    object-fit: cover; /* Asegura que la imagen cubra el área sin distorsionarse */
 }
 
 /* Estilos para el cuerpo del card */
 .card-body {
-    padding: 20px; /* Espaciado interno */
+    padding: 15px; /* Espaciado interno */
 }
 
 .card-title {
@@ -279,21 +284,16 @@ button:hover {
     margin-bottom: 15px;
 }
 
-/* Estilos para el botón */
-.btn {
-    font-size: 1em;
-    padding: 10px 20px;
-    background-color: #FFC30F; /* Color de fondo del botón */
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    text-decoration: none; /* Quita el subrayado del enlace */
-    display: inline-block;
-    transition: background-color 0.3s ease;
+/* Estilos para el pie del card */
+.card-footer {
+    background-color: #1a0c3d; /* Color de fondo del pie */
+    padding: 10px; /* Espaciado interno */
+    border-top: 1px solid #1a0c3d; /* Borde superior para separación */
+    text-align: center;
+    margin-top: auto; /* Asegura que esté en la parte inferior de la tarjeta */
 }
 
-.btn:hover {
-    background-color: #FFD84D; /* Color de fondo del botón al pasar el ratón */
+.card-footer .text-muted {
+    color: #FFC30F; /* Color del precio */
 }
 

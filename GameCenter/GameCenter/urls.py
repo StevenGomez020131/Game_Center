@@ -33,7 +33,14 @@ urlpatterns = [
     path("formulario/", views.formulario, name= "Formulario" ),
     path("registrar/", views_comentarios.registrar, name="Registrar"),
     path("juegosxbox/", views_productos.JuegosXboxx, name="JuegosXbox"),
-    path("contactoform/", views.contactoForm, name="RegistrarFormulario")
+    path("contactoform/", views.contactoForm, name="RegistrarFormulario"),
+    path("juegosplay/", views_productos.JuegosPlayStation, name="JuegosPlayStation"),
+    path("juegosnintendo/", views_productos.JuegosNintendo, name="JuegosNintendo"),
+    path("juegospc/", views_productos.JuegosPc, name="JuegosPC"),
+    path("accesoriosxbox/", views_productos.AccesoriosXbox, name="AccesoriosXbox"),
+    path("accesoriosplay/", views_productos.AccesoriosPlayStation, name="AccesoriosPlayStation"),
+    path("accesoriosnintendo/", views_productos.AccesoriosNintendo, name="AccesoriosNintendo"),
+    path("accesoriospc/", views_productos.AccesoriosPC, name="AccesoriosPC"), 
 
 ]
 if settings.DEBUG:

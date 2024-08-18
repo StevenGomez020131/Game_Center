@@ -6,21 +6,21 @@
 
 <div class="container_card">
     <div class="row">
-        {% for juego in juegos %}
+        {% for accesorio in accesorios %}
             <div class="col-md-4 mb-3">
                 <div class="card">
                     <!-- Imagen del juego en la parte superior con clase card_imagen -->
                    
-                        <img src="{{ juego.imagen.url }}" class="card_imagen">
+                        <img src="{{ accesorio.imagen.url }}" class="card_imagen">
                      
                     <div class="card-body">
-                        <h5 class="card-title" style="text-align: center;">{{ juego.nombre }}</h5>
+                        <h5 class="card-title" style="text-align: center;">{{ accesorio.nombre }}</h5>
                     
                     </div>
 
                     <!-- Precio del juego en la parte inferior -->
                     <div class="card-footer text-center">
-                        <span class="text-muted">${{ juego.precio }}</span>
+                        <span class="text-muted">${{ accesorio.precio }}</span>
                     </div>
                 </div>
             </div>
