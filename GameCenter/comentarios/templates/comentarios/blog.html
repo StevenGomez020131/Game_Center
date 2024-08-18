@@ -15,5 +15,23 @@
         </div>
     </div>
 </div>
+<div class="container_card">
+    <div class="row">
+    {% for comentario in comentarios %}
+    
+        <div class="col-md-4 mb-3">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title" style="text-align: center;">{{comentario.nombre}}</h5>
+                    <p class="card-text">{{comentario.descripcion}}</p>
+                    
+                </div>
+            </div>
+        </div>
+        {%endfor%}
+    </div>
+   
+</div>
+
 <script src="pagina.js"></script>
 {%endblock%}
