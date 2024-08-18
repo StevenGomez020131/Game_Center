@@ -15,15 +15,31 @@
         </div>
     </div>
 </div>
+
+<div class="formulario-contacto">
+    <h2>Dejanos saber tu experiencia</h2>
+    <form action="{% url 'Registrar'%}" method="POST"role="form">
+        {%csrf_token%}
+        <div class="campo">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="usuario" required>
+        </div>
+        <div class="campo">
+            <label for="descripcion">Descripción:</label>
+            <textarea id="descripcion" name="mensaje" rows="4" required></textarea>
+        </div>
+        <button type="submit">Enviar</button>
+    </form>
+</div>
 <div class="container_card">
     <div class="row">
-    {% for comentario in comentarios %}
+    {% for comentarios in consultas %}
     
         <div class="col-md-4 mb-3">
             <div class="card">
                 <div class="card-body">
-                    <h5 class="card-title" style="text-align: center;">{{comentario.nombre}}</h5>
-                    <p class="card-text">{{comentario.descripcion}}</p>
+                    <h5 class="card-title" style="text-align: center;">{{comentarios.usuario}}</h5>
+                    <p class="card-text">{{comentarios.mensaje}}</p>
                     
                 </div>
             </div>
@@ -33,5 +49,8 @@
    
 </div>
 
-<script src="pagina.js"></script>
+
+
+
+
 {%endblock%}

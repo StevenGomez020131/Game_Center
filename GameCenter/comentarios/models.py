@@ -17,3 +17,16 @@ class comentarios(models.Model): #Define la estructura de nuestra tabla
     def _str_(self):
         return self.nombre
         #Indica que se mostrará el nombre como el valor en la tabla
+
+class ComentarioContacto(models.Model):
+    id = models.AutoField(primary_key=True,verbose_name="Clave")
+    usuario = models.TextField(verbose_name="Usuario")
+    mensaje = models.TextField(verbose_name="Comentario")
+    created =models.DateTimeField(auto_now_add=True,verbose_name="Registrado")
+    class Meta:
+        verbose_name = "Comentario Contacto"
+        verbose_name_plural = "Comentarios Contactos"
+        ordering = ["-created"]
+    def __str__(self):
+        return self.mensaje
+#Indica que se mostrára el mensaje como valor en la tabla
