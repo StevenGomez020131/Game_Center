@@ -14,7 +14,6 @@ def productos(request):
     return render(request, "inicio/productos.html")
 
 def blog(request):
-
     return render(request, "inicio/blog.html")
 
 def carrito(request):

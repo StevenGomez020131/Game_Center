@@ -19,14 +19,14 @@ from django.urls import path
 from inicio import views
 from django.conf import settings
 from productos import views as views_productos
-from comentarios import views as views_comenarios
+from comentarios import views as views_comentarios
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path("",views.inicio, name="Inicio"),
     path("contacto/",views.contacto, name="Contacto"),
     path("productos/",views.productos, name="Productos"),
-    path("blog/",views_comenarios.blog, name="Blog" ),
+    path("blog/", views_comentarios.blog, name="Blog"),
     path("carrito/",views.carrito, name="Carrito"),
     path("accesoriosGeneral/", views.accesoriosGeneral, name="AccesoriosGeneral"),
     path("juegosGeneral/",views.juegosGeneral, name="JuegosGeneral"),
