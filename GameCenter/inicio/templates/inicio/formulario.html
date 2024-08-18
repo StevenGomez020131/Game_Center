@@ -2,12 +2,15 @@
 {% block titulo %} Contacto {% endblock %}
 {% block contenido %}
 
+
+
 <div class="formulario-contacto">
     <h2>Formulario de Contacto</h2>
-    <form action="#" method="POST">
+    <form class="form-horizontal" action="{% url 'RegistrarFormulario'%}" method="POST" role="form">
+        {%csrf_token%}
         <div class="campo">
             <label for="nombre">Nombre:</label>
-            <input type="text" id="nombre" name="nombre" required>
+            <input type="text" id="nombre" name="nombre" type="text" class="form-control" required>
         </div>
         <div class="campo">
             <label for="email">Email:</label>
@@ -21,7 +24,7 @@
             <label for="descripcion">Descripción:</label>
             <textarea id="descripcion" name="descripcion" rows="4" required></textarea>
         </div>
-        <button type="submit">Enviar</button>
+        <input type="submit" value="Enviar" class="btn btn-primary">
     </form>
 </div>
 

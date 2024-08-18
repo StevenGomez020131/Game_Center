@@ -31,7 +31,8 @@ urlpatterns = [
     path("accesoriosGeneral/", views.accesoriosGeneral, name="AccesoriosGeneral"),
     path("juegosGeneral/",views.juegosGeneral, name="JuegosGeneral"),
     path("formulario/", views.formulario, name= "Formulario" ),
-    path("registrar/", views_comentarios.registrar, name="Registrar")
+    path("registrar/", views_comentarios.registrar, name="Registrar"),
+    path("contactoformulario/", views.contactoForm, name="RegistrarFormulario")
 
 ]
 if settings.DEBUG:
