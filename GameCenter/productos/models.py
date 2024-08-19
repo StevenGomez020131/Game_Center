@@ -1,8 +1,9 @@
 from django.db import models
-
+from django.conf import settings
 # Create your models here.
 
 class accesoriosXbox(models.Model):
+    id = models.AutoField(primary_key=True)
     imagen = models.ImageField(null=True, upload_to="fotos", verbose_name="Fotografia")
     nombre = models.TextField()
     descripcion = models.TextField()
@@ -80,6 +81,26 @@ class accesoriosNintendo(models.Model):
     
     def __str__(self) -> str:
         return self.nombre
+
+class accesoriosPC(models.Model):
+    imagen = models.ImageField(null=True, upload_to="fotos", verbose_name="Fotografia")
+    nombre = models.TextField()
+    descripcion = models.TextField()
+    precio = models.FloatField()
+    created = models.DateTimeField(auto_now_add=True)
+    update = models.DateTimeField(auto_now_add=True)
+    
+    class Meta:
+        verbose_name = "Accesorio PC"
+        verbose_name_plural = "Accesorios PC"
+        ordering = ["-created"]
+    
+    def __str__(self) -> str:
+        return self.nombre
+
+
+
+
 
 
 

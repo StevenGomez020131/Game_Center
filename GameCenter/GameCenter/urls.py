@@ -27,7 +27,7 @@ urlpatterns = [
     path("contacto/",views.contacto, name="Contacto"),
     path("productos/",views.productos, name="Productos"),
     path("blog/", views_comentarios.blog, name="Blog"),
-    path("carrito/",views.carrito, name="Carrito"),
+    path('carrito/', views_productos.carrito, name='Carrito'),
     path("accesoriosGeneral/", views.accesoriosGeneral, name="AccesoriosGeneral"),
     path("juegosGeneral/",views.juegosGeneral, name="JuegosGeneral"),
     path("formulario/", views.formulario, name= "Formulario" ),
@@ -41,6 +41,10 @@ urlpatterns = [
     path("accesoriosplay/", views_productos.AccesoriosPlayStation, name="AccesoriosPlayStation"),
     path("accesoriosnintendo/", views_productos.AccesoriosNintendo, name="AccesoriosNintendo"),
     path("accesoriospc/", views_productos.AccesoriosPC, name="AccesoriosPC"), 
+
+
+
+
 
 ]
 if settings.DEBUG:

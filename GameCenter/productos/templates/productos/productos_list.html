@@ -1,0 +1,73 @@
+{%extends "inicio/principal.html"%}
+{% block titulo %} Inicio {% endblock %}
+
+{% block contenido %}
+<div class="container">
+    <div class="row">
+        <!-- Accesorios Xbox -->
+        {% for accesorio in accesorios_xbox %}
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="{{ accesorio.imagen.url }}" data-description="{{ accesorio.descripcion }}" style="cursor: pointer;" class="card_imagen">
+                    <div class="card-body">
+                        <h5 class="card-title" style="text-align: center;">{{ accesorio.nombre }}</h5>
+                    </div>
+                    <div class="card-footer text-center">
+                        <span class="text-muted">${{ accesorio.precio }}</span>
+                        <a href="{% url 'agregar_al_carrito' 'accesoriosXbox' accesorio.id %}">Agregar al Carrito</a>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+
+        <!-- Repite bloques similares para los otros tipos de productos -->
+        <!-- Juegos Xbox -->
+        {% for juego in juegos_xbox %}
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="{{ juego.imagen.url }}" data-description="{{ juego.descripcion }}" style="cursor: pointer;" class="card_imagen">
+                    <div class="card-body">
+                        <h5 class="card-title" style="text-align: center;">{{ juego.nombre }}</h5>
+                    </div>
+                    <div class="card-footer text-center">
+                        <span class="text-muted">${{ juego.precio }}</span>
+                        <a href="{% url 'agregar_al_carrito' 'juegosXbox' juego.id %}">Agregar al Carrito</a>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+
+        <!-- Accesorios PlayStation -->
+        {% for accesorio in accesorios_playstation %}
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="{{ accesorio.imagen.url }}" data-description="{{ accesorio.descripcion }}" style="cursor: pointer;" class="card_imagen">
+                    <div class="card-body">
+                        <h5 class="card-title" style="text-align: center;">{{ accesorio.nombre }}</h5>
+                    </div>
+                    <div class="card-footer text-center">
+                        <span class="text-muted">${{ accesorio.precio }}</span>
+                        <a href="{% url 'agregar_al_carrito' 'accesoriosPlayStation' accesorio.id %}">Agregar al Carrito</a>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+
+        <!-- Accesorios Nintendo -->
+        {% for accesorio in accesorios_nintendo %}
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="{{ accesorio.imagen.url }}" data-description="{{ accesorio.descripcion }}" style="cursor: pointer;" class="card_imagen">
+                    <div class="card-body">
+                        <h5 class="card-title" style="text-align: center;">{{ accesorio.nombre }}</h5>
+                    </div>
+                    <div class="card-footer text-center">
+                        <span class="text-muted">${{ accesorio.precio }}</span>
+                        <a href="{% url 'agregar_al_carrito' 'accesoriosNintendo' accesorio.id %}">Agregar al Carrito</a>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+{%endblock%}
