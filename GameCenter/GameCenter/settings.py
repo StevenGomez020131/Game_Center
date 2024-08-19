@@ -26,9 +26,9 @@ STATIC_DIR = os.path.join(BASE_DIR,"static")
 SECRET_KEY = 'django-insecure-$)$42u2j$+9cwts^n61icl(=3%#+eme%ek9r8b&-wqh)v*j#7*'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['steven3102.pythonanywhere.com', 'localhost', '127.0.0.1']
 
 
 # Application definition
@@ -45,7 +45,8 @@ INSTALLED_APPS = [
     'productos.apps.ProductosConfig',
     'comentarios.apps.ComentariosConfig',
     'colorfield',
-   
+
+
 ]
 
 MIDDLEWARE = [
@@ -126,7 +127,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
 STATIC_URL = 'static/'
-
+STATIC_ROOT = os.path.join(BASE_DIR, "static")
 
 
 # Default primary key field type
@@ -147,7 +148,7 @@ JAZZMIN_SETTINGS = {
 
     # Title on the brand (19 chars max) (defaults to current_admin_site.site_header if absent or None)
     "site_brand": "Game Center Admin",
-    
+
      # Logo to use for your site, must be present in static files, used for brand on top left
     "site_logo": "inicio/images/logo1.png",
 
@@ -173,7 +174,7 @@ JAZZMIN_SETTINGS = {
     "copyright": "Game center",
 
     # List of model admins to search from the search bar, search bar omitted if excluded
-    # If you want to use a single search field you dont need to use a list, you can use a simple string 
+    # If you want to use a single search field you dont need to use a list, you can use a simple string
     "search_model": ["auth.User", "auth.Group"],
 
     # Field name on user model that contains avatar ImageField/URLField/Charfield or a callable that receives the user
@@ -231,8 +232,8 @@ JAZZMIN_SETTINGS = {
     # Custom links to append to app groups, keyed on app name
     "custom_links": {
         "books": [{
-            "name": "Make Messages", 
-            "url": "make_messages", 
+            "name": "Make Messages",
+            "url": "make_messages",
             "icon": "fas fa-comments",
             "permissions": ["books.view_book"]
         }]
@@ -278,8 +279,8 @@ JAZZMIN_SETTINGS = {
     "changeform_format": "horizontal_tabs",
     # override change forms on a per modeladmin basis
     "changeform_format_overrides": {"auth.user": "collapsible", "auth.group": "vertical_tabs"},
-    
-   
+
+
 }
 
 JAZZMIN_UI_TWEAKS = {
