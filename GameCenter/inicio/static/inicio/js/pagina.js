@@ -33,3 +33,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Inicializar con la primera imagen
     showImage(currentIndex);
+
+
+// Obtener el modal y el elemento de descripción

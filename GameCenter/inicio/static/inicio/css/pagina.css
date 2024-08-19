@@ -46,7 +46,8 @@ body {
 .botones {
     display: flex;
     justify-content: center;
-    margin-top: 10px;
+    margin-top: 30px;
+    
 }
 
 .botones button {
@@ -58,6 +59,7 @@ body {
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    color: #000000;
 }
 
 .botones button:hover {
@@ -113,6 +115,7 @@ body {
 
 .navbar-login {
     margin-left: 20px;
+    
 }
 
 /* Estilos para botones genéricos */
@@ -120,7 +123,7 @@ button {
     font-size: 11px;
     padding: 10px 20px;
     background-color: #FFC30F;
-    color: white;
+    color: #000000;
     border: none;
     border-radius: 3px;
     cursor: pointer;
@@ -257,6 +260,7 @@ button:hover {
     overflow: hidden; /* Asegura que el contenido no se desborde */
     border: 1px solid #1a0c3d; /* Borde para mejorar la separación visual */
     transition: transform 0.3s ease; /* Suaviza la transición al pasar el ratón */
+    
 }
 
 .card:hover {
@@ -268,11 +272,13 @@ button:hover {
     width: 100%; /* Asegura que la imagen ocupe todo el ancho de la tarjeta */
     height: 200px; /* Ajusta la altura de la imagen */
     object-fit: cover; /* Asegura que la imagen cubra el área sin distorsionarse */
+    
 }
 
 /* Estilos para el cuerpo del card */
 .card-body {
     padding: 15px; /* Espaciado interno */
+    
 }
 
 .card-title {
@@ -297,3 +303,51 @@ button:hover {
     color: #FFC30F; /* Color del precio */
 }
 
+
+.modal {
+    display: none; /* Oculto por defecto */
+    position: fixed; /* Fijo en la pantalla */
+    z-index: 1; /* Encima de otros contenidos */
+    left: 0;
+    top: 0;
+    width: 100%; /* Ocupa toda la pantalla */
+    height: 100%; /* Ocupa toda la pantalla */
+    overflow: auto; /* Permite el desplazamiento si el contenido es más alto que la pantalla */
+    background-color: rgba(0,0,0,0.4); /* Fondo semitransparente */
+}
+
+/* Estilo del contenido del modal */
+.modal-content {
+    background-color: #FFC30F; /* Fondo blanco para el contenido */
+    margin: 15% auto; /* Centrado verticalmente y con margen */
+    padding: 20px;
+    border: 1px solid #888; /* Borde gris claro */
+    width: 80%; /* Ancho del modal */
+    max-width: 600px; /* Ancho máximo del modal */
+    position: relative; /* Posición relativa para colocar el botón de cerrar */
+    border-radius: 50px;
+}
+
+/* Estilo del botón de cerrar */
+.close {
+    color: #aaa; /* Color del texto */
+    float: right; /* Alineado a la derecha */
+    font-size: 28px; /* Tamaño del texto */
+    font-weight: bold; /* Negrita */
+    cursor: pointer; /* Cursor en forma de mano */
+}
+
+.close:hover,
+.close:focus {
+    color: black; /* Color del texto al pasar el ratón o enfocar */
+    text-decoration: none; /* Sin subrayado */
+}
+
+/* Estilo de la descripción */
+#modalDescription {
+    font-size: 16px; /* Tamaño del texto */
+    color: #000000; /* Color del texto */
+    margin-top: 10px; /* Espacio arriba del texto */
+    text-align: center; /* Centrado del texto */
+    font-weight: bold;
+}

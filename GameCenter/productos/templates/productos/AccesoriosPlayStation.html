@@ -3,22 +3,29 @@
 
 {% block contenido %}
 <h1 style="text-align: center; padding-bottom: 15px">Accesorios PlayStation</h1>
-
+<div id="myModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <p id="modalDescription" style="text-align: center; margin-top: 10px;"></p>
+    </div>
+</div>
 <div class="container_card">
     <div class="row">
-        {% for accesorio in accesorios %}
+        {% for accesorio in accesoriosPlay %}
             <div class="col-md-4 mb-3">
                 <div class="card">
-                    <!-- Imagen del juego en la parte superior con clase card_imagen -->
-                   
-                        <img src="{{ accesorio.imagen.url }}" class="card_imagen">
-                     
+                    <!-- Imagen del accesorio con clase card_imagen -->
+                    <img 
+                        src="{{ accesorio.imagen.url }}" 
+                        class="card_imagen" 
+                        data-description="{{ accesorio.descripcion }}" 
+                        
+                        style="cursor: pointer;"
+                    >
                     <div class="card-body">
                         <h5 class="card-title" style="text-align: center;">{{ accesorio.nombre }}</h5>
-                    
                     </div>
-
-                    <!-- Precio del juego en la parte inferior -->
+                    <!-- Precio del accesorio en la parte inferior -->
                     <div class="card-footer text-center">
                         <span class="text-muted">${{ accesorio.precio }}</span>
                     </div>

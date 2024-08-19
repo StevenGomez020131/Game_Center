@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from .models import JuegosXbox
 from .models import accesoriosXbox
+from .models import accesoriosPlayStation
 # Create your views here.
 
 def JuegosXboxx(request):
@@ -24,8 +25,8 @@ def AccesoriosXbox(request):
     return render (request,"productos/AccesoriosXbox.html", {'accesorios' : accesorios})
 
 def AccesoriosPlayStation(request):
-    accesorios = accesoriosXbox.objects.all()
-    return render (request,"productos/AccesoriosPlayStation.html", {'accesorios' : accesorios})
+    accesoriosPlay = accesoriosPlayStation.objects.all()
+    return render (request,"productos/AccesoriosPlayStation.html", {'accesoriosPlay' : accesoriosPlay})
 
 def AccesoriosNintendo(request):
     accesorios = accesoriosXbox.objects.all()
