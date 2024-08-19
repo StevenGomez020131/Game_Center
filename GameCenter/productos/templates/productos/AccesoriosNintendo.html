@@ -3,7 +3,12 @@
 
 {% block contenido %}
 <h1 style="text-align: center; padding-bottom: 15px">Accesorios Nintendo </h1>
-
+<div id="myModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <p id="modalDescription" style="text-align: center; margin-top: 10px;"></p>
+    </div>
+</div>
 <div class="container_card">
     <div class="row">
         {% for accesorio in accesoriosNintendo %}
@@ -11,7 +16,7 @@
                 <div class="card">
                     <!-- Imagen del juego en la parte superior con clase card_imagen -->
                    
-                        <img src="{{ accesorio.imagen.url }}" class="card_imagen">
+                    <img src="{{ accesorio.imagen.url }}" data-description="{{ accesorio.descripcion }}" style="cursor: pointer;" class="card_imagen">
                      
                     <div class="card-body">
                         <h5 class="card-title" style="text-align: center;">{{ accesorio.nombre }}</h5>

@@ -3,14 +3,19 @@
 
 {% block contenido %}
 <h1 style="text-align: center; padding-bottom: 15px">Juegos PlayStation</h1>
-
+<div id="myModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <p id="modalDescription" style="text-align: center; margin-top: 10px;"></p>
+    </div>
+</div>
 <div class="container_card">
     <div class="row">
         {% for juego in juegos %}
             <div class="col-md-4 mb-3">
                 <div class="card">
                     <!-- Imagen del juego en la parte superior con clase card_imagen -->
-                        <img src="{{ juego.imagen.url }}" class="card_imagen">
+                    <img src="{{ juego.imagen.url }}" data-description="{{ juego.descripcion }}" style="cursor: pointer;" class="card_imagen">
 
                     <div class="card-body">
                         <h5 class="card-title" style="text-align: center;">{{ juego.nombre }}</h5>
