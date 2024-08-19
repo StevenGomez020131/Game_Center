@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const images = [
         'https://i.ytimg.com/vi/tzhnfcLLrSE/maxresdefault.jpg',
         'https://i.ytimg.com/vi/iqbcJIJGRAs/maxresdefault.jpg',
-        'https://via.placeholder.com/800x400/00FF00/FFFFFF?text=Image+3'
+        'https://i.ytimg.com/vi/NFTj30ynbac/hq720.jpg?sqp=-oaymwExCK4FEIIDSFryq4qpAyMIARUAAIhCGAHwAQH4Af4JgALQBYoCDAgAEAEYESBmKHIwDw==&rs=AOn4CLAchBTd3C3iZedFJU9R3p2PUSee6g'
     ];
 
     let currentIndex = 0;
