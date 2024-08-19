@@ -1,7 +1,14 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect, get_object_or_404
+import json
+from django.http import JsonResponse
 from .models import JuegosXbox
 from .models import accesoriosXbox
 from .models import accesoriosPlayStation
+from .models import accesoriosNintendo
+from .models import accesoriosPC
+
+
+
 # Create your views here.
 
 def JuegosXboxx(request):
@@ -29,10 +36,24 @@ def AccesoriosPlayStation(request):
     return render (request,"productos/AccesoriosPlayStation.html", {'accesoriosPlay' : accesoriosPlay})
 
 def AccesoriosNintendo(request):
-    accesorios = accesoriosXbox.objects.all()
-    return render (request,"productos/AccesoriosNintendo.html", {'accesorios' : accesorios})
+    accesorioNintendo = accesoriosNintendo.objects.all()
+    return render (request,"productos/AccesoriosNintendo.html", {'accesoriosNintendo' : accesorioNintendo})
 
 def AccesoriosPC(request):
-    accesorios = accesoriosXbox.objects.all()
-    return render (request,"productos/AccesoriosPc.html", {'accesorios' : accesorios})
+    accesoriosPc = accesoriosPC.objects.all()
+    return render (request,"productos/AccesoriosPc.html", {'accesoriosPC' : accesoriosPc})
+
+def carrito(request):
+    return render(request, 'productos/carrito.html')
+
+
+
+
+
+
+
+
+
+
+
 
