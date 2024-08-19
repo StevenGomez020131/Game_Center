@@ -36,7 +36,7 @@
         
       </div>
       <div class="navbar-cart">
-        <a href="{% url 'Carrito' %}">
+        <a href="{% url 'cart_summary' %}">
           <img
             src="{% static 'inicio/images/carrito.png' %}"
             style="height: 30px"
@@ -44,6 +44,7 @@
           />
         </a>
       </div>
+
       <div class="navbar-login">
         <a href="{% url 'admin:index' %}">
           <button>Iniciar sesión</button>
@@ -60,6 +61,8 @@
       {% endblock %}
     </div>
 
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    
     <!-- Script para redireccionamiento -->
     <script src="{% static 'inicio/js/pagina.js' %}"></script>
     <script src="{% static 'inicio/js/modal.js' %}"></script>

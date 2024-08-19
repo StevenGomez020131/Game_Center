@@ -15,7 +15,7 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
 from inicio import views
 from django.conf import settings
 from productos import views as views_productos
@@ -40,7 +40,8 @@ urlpatterns = [
     path("accesoriosxbox/", views_productos.AccesoriosXbox, name="AccesoriosXbox"),
     path("accesoriosplay/", views_productos.AccesoriosPlayStation, name="AccesoriosPlayStation"),
     path("accesoriosnintendo/", views_productos.AccesoriosNintendo, name="AccesoriosNintendo"),
-    path("accesoriospc/", views_productos.AccesoriosPC, name="AccesoriosPC"), 
+    path("accesoriospc/", views_productos.AccesoriosPC, name="AccesoriosPC"),
+    path("cart/", include("cart.urls")),
 
 ]
 if settings.DEBUG:

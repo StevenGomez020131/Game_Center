@@ -40,3 +40,5 @@ def contactoForm(request):
     form = ContactoForm()
     return render(request,'inicio/formulario.html',{'form':form})
 
+
+
