@@ -8,10 +8,39 @@
     <div class="texto-promocion">
         <h1></h1>
        
-    </div>
-
-    
-</div>
+        <div class="container">
+        {% if cart_products %}
+            {% for product in cart_products %}
+                <div class="cart-item">
+                    <img src="{{ product.imagen }}"class="product-image"/>
+                    <p><strong>Producto:</strong> {{ product.nombre }}</p>
+                    <p><strong>Precio:</strong> {{ product.precio }}</p>
+                    <p><strong>Descripción:</strong> {{ product.descripcion }}</p>
+                </div>
+            {% endfor %}
+            {% else %}
+            No hay nada en tu carrito...
+            <br/><br/><br/><br/><br/><br/>
+            {% endif %}
+        </div>
+        
+        <style>
+            .cart-item {
+                border: 1px solid #ddd;
+                padding: 10px;
+                margin-bottom: 10px;
+                border-radius: 5px;
+                display: flex;
+                flex-direction: column; /* Apilar elementos en columna */
+                align-items: flex-start; /* Alinear elementos al inicio */
+            }
+        
+            .product-image {
+                max-width: 100px;
+                margin-bottom: 10px; /* Espacio entre la imagen y el texto */
+                border-radius: 5px;
+            }
+        </style>
 
        
 
