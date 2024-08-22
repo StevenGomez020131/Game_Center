@@ -20,6 +20,7 @@ from inicio import views
 from django.conf import settings
 from productos import views as views_productos
 from comentarios import views as views_comentarios
+from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),

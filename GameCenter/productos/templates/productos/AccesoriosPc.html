@@ -26,6 +26,8 @@
                     <!-- Precio del juego en la parte inferior -->
                     <div class="card-footer text-center">
                         <span class="text-muted">${{ accesorio.precio }}</span>
+                        <br/>
+                        <button type="button" value ="{{accesorio.id}}" class="btn btn-secondary" id="add-cart">Agregar al carrito</button>
                     </div>
                 </div>
             </div>
@@ -33,6 +35,36 @@
     </div>
 </div>
 
+<script>
+
+    //Revisar si el boton fue presionado
+    $(document).on('click', '#add-cart', function(e){
+        e.preventDefault();
+        $.ajax({
+            type: 'POST',
+            url: '{% url 'cart_add' %}',
+            data: {
+                product_id: $('#add-cart').val(),
+                csrfmiddlewaretoken:'{{ csrf_token }}',
+                action: 'post'
+            },
+    
+            success: function(json){
+                console.log(json)
+            },
+            error: function(xhr, errmsg,err){
+    
+            }
+    
+    
+        });
+    
+    
+    })
+    
+    
+    
+    </script>
 
 
 

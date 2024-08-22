@@ -26,7 +26,6 @@
                     <!-- Precio del juego en la parte inferior -->
                     <div class="card-footer text-center">
                         <span class="text-muted">${{ juego.precio }}</span>
-                        <br/>ID:{{juego.id}}
                         <br/>
                         <button type="button" value ="{{juego.id}}" class="btn btn-secondary" id="add-cart">Agregar al carrito</button>
                     </div>
@@ -35,6 +34,32 @@
         {% endfor %}
     </div>
 </div>
+
+<script>
+    //Revisar si el botón fue presionado
+    $(document).on('click', '#add-cart', function(e){
+        e.preventDefault();
+        var productId = $(this).val();  // Obtiene el valor del botón presionado
+        $.ajax({
+            type:'POST',
+            url:'{% url 'cart_add' %}',
+            data: {
+                product_id: productId,
+                csrfmiddlewaretoken:'{{ csrf_token }}',
+                action: 'post'
+            },
+            success: function(json){
+                //console.log(json);
+                document.getElementById("cart_quantity").
+                textContent = json.qty
+            },
+            error: function(xhr, errmsg, err){
+                console.log("Error: " + errmsg);
+            }
+        });
+    });
+    </script>
+    
 
 
 
