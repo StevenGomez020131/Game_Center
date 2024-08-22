@@ -39,7 +39,7 @@ body {
 .texto-promocion img {
     height: 200px; /* Tamaño deseado para las imágenes */
     border-radius: 10px;
-    
+
 }
 
 /* Estilos para los botones debajo de las imágenes */
@@ -47,7 +47,7 @@ body {
     display: flex;
     justify-content: center;
     margin-top: 30px;
-    
+
 }
 
 .botones button {
@@ -115,7 +115,7 @@ body {
 
 .navbar-login {
     margin-left: 20px;
-    
+
 }
 
 /* Estilos para botones genéricos */
@@ -262,7 +262,7 @@ button:hover {
     border: 1px solid #1a0c3d; /* Borde para mejorar la separación visual */
     transition: transform 0.3s ease; /* Suaviza la transición al pasar el ratón */
 
-    
+
 }
 
 .card:hover {
@@ -274,13 +274,13 @@ button:hover {
     width: 100%; /* Asegura que la imagen ocupe todo el ancho de la tarjeta */
     height: 200px; /* Ajusta la altura de la imagen */
     object-fit: cover; /* Asegura que la imagen cubra el área sin distorsionarse */
-    
+
 }
 
 /* Estilos para el cuerpo del card */
 .card-body {
     padding: 15px; /* Espaciado interno */
-    
+
 }
 
 .card-title {
@@ -382,37 +382,37 @@ button:hover {
     padding: 40px 0;
     color: #fff; /* Texto blanco */
   }
-  
+
   /* Estilo del contenedor en el footer */
   .footer .container {
     max-width: 1140px;
     margin: 0 auto;
   }
-  
+
   /* Estilo de los encabezados en el footer */
   .footer h5 {
     font-size: 18px;
     margin-bottom: 20px;
     color: #fff; /* Títulos en blanco */
   }
-  
+
   /* Estilo de los párrafos en el footer */
   .footer p {
     margin-bottom: 10px;
     color: #fff; /* Párrafos en blanco */
   }
-  
+
   /* Estilo de las listas de enlaces */
   .footer ul {
     padding-left: 0;
     list-style: none; /* Sin viñetas */
   }
-  
+
   /* Estilo de los elementos de lista */
   .footer ul li {
     margin-bottom: 10px;
   }
-  
+
   /* Estilo de los enlaces en las listas */
   .footer ul li a {
     text-decoration: none; /* Sin subrayado */
@@ -420,39 +420,40 @@ button:hover {
     font-weight: bold; /* Texto en negrita */
     transition: color 0.3s, transform 0.3s; /* Efectos de transición */
   }
-  
+
   /* Efecto de hover para los enlaces */
   .footer ul li a:hover {
     color: #fff; /* Color blanco al pasar el ratón */
     text-decoration: underline; /* Subrayado al pasar el ratón */
     transform: scale(1.05); /* Aumenta ligeramente el tamaño al pasar el ratón */
   }
-  
+
   /* Estilo de los íconos de redes sociales */
   .social-media {
     display: flex;
     justify-content: center; /* Centra los íconos horizontalmente */
     gap: 15px; /* Espacio entre los íconos */
   }
-  
+
   .social-media a img {
     width: 30px; /* Tamaño del ícono */
     height: 30px; /* Tamaño del ícono */
     transition: transform 0.3s, filter 0.3s; /* Efectos de transición */
   }
-  
+
   .social-media a:hover img {
     transform: scale(1.1); /* Aumenta ligeramente el tamaño del ícono al pasar el ratón */
     filter: brightness(1.2); /* Aumenta el brillo del ícono al pasar el ratón */
   }
-  
+
   /* Estilo del pie de página */
   .footer-bottom {
     background-color: #13072E; /* Fondo más oscuro para el pie de página */
     padding: 10px 0;
     text-align: center;
+
   }
-  
+
   .footer-bottom p {
     margin: 0;
     color: #fff; /* Texto blanco */
