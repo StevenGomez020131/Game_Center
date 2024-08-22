@@ -458,3 +458,20 @@ button:hover {
     margin: 0;
     color: #fff; /* Texto blanco */
   }
+
+
+            .cart-item {
+                border: 1px solid #ddd;
+                padding: 10px;
+                margin-bottom: 10px;
+                border-radius: 5px;
+                display: flex;
+                flex-direction: column; /* Apilar elementos en columna */
+                align-items: flex-start; /* Alinear elementos al inicio */
+            }
+        
+            .product-image {
+                max-width: 100px;
+                margin-bottom: 10px; /* Espacio entre la imagen y el texto */
+                border-radius: 5px;
+            }
