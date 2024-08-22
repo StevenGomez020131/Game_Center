@@ -7,15 +7,15 @@
 <div class="container">
     <div class="texto-promocion">
         <h1></h1>
-       
+        
         <div class="container">
         {% if cart_products %}
             {% for product in cart_products %}
-                <div class="cart-item">
-                    <img src="{{ product.imagen }}"class="product-image"/>
+                <div style="text-align: justify;" class="cart-item">
+                    
                     <p><strong>Producto:</strong> {{ product.nombre }}</p>
                     <p><strong>Precio:</strong> {{ product.precio }}</p>
-                    <p><strong>Descripción:</strong> {{ product.descripcion }}</p>
+
                 </div>
             {% endfor %}
             {% else %}

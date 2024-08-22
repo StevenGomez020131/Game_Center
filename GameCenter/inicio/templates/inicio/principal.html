@@ -36,7 +36,7 @@
         <a href="{% url 'Contacto' %}">Acerca de nosotros</a>
         
       </div>
-      <div class="navbar-cart">
+      <div  class="navbar-cart">
         <a href="{% url 'cart_summary' %}">
           <img
             src="{% static 'inicio/images/carrito.png' %}"
@@ -44,7 +44,7 @@
             alt="Carrito de compra"
           
           />
-          <span class="badge bg-dark text-white ms-1 rounded-pill text-yellow" id="cart_quantity">{{ cart|length }}
+          <span style="color: yellow;" class="badge bg-dark text-white ms-1 rounded-pill text-yellow" id="cart_quantity">{{ cart|length }}
           </span>
           
 
