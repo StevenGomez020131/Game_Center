@@ -33,11 +33,12 @@
 </div>
 <div class="container_card">
     <div class="row">
+        
     {% for comentarios in consultas %}
     
-        <div class="col-md-4 mb-3">
-            <div class="card">
-                <div class="card-body">
+    <div class="card mb-3 mx-auto" style="width: 200px;">
+            <div  class="card">
+                <div  class="card-body">
                     <h5 class="card-title" style="text-align: center;">{{comentarios.usuario}}</h5>
                     <p class="card-text">{{comentarios.mensaje}}</p>
                     

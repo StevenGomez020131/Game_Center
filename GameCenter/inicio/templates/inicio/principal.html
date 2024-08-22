@@ -66,7 +66,43 @@
       <!-- block sirve para indicar que colocaremos un bloque de contenido a través de nuestra variable content -->
       {% endblock %}
     </div>
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <h5>Sobre Nosotros</h5>
+            <p>Somos una empresa dedicada a ofrecer los mejores productos para gamers. Contamos con una amplia variedad de artículos para tus consolas favoritas.</p>
+          </div>
+          <div class="col-md-4">
+            <h5>Enlaces Rápidos</h5>
+            <ul class="list-unstyled">
+              <li><a href="{% url 'Inicio' %}">Inicio</a></li>
+              <li><a href="{% url 'Productos' %}">Productos</a></li>
+              <li><a href="{% url 'Blog' %}">Blog</a></li>
+              <li><a href="{% url 'Formulario' %}">Contactanos</a></li>
+              <li><a href="{% url 'Contacto' %}">Acerca de nosotros</a></li>
+            </ul>
+          </div>
+          <div class="col-md-4">
+            <h5>Contáctanos</h5>
+            <p>Email: contacto@example.com</p>
+            <p>Teléfono: +123 456 789</p>
+            <div class="social-media">
+              <a href="https://facebook.com" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook" />
+              </a>
 
+              <a href="https://instagram.com" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" />
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; {{ current_year }} Todos los derechos reservados.</p>
+      </div>
+    </footer>
     
     
     <!-- Script para redireccionamiento -->
