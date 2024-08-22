@@ -16,12 +16,12 @@
             <div class="col-md-4 mb-3">
                 <div class="card">
                     <!-- Imagen del juego en la parte superior con clase card_imagen -->
-                   
+
                         <img src="{{ accesorio.imagen.url }}" data-description="{{ accesorio.descripcion }}" style="cursor: pointer;" class="card_imagen">
-                     
+
                     <div class="card-body">
                         <h5 class="card-title" style="text-align: center;">{{ accesorio.nombre }}</h5>
-                    
+
                     </div>
 
                     <!-- Precio del juego en la parte inferior -->
@@ -31,7 +31,7 @@
                         <button type="button" value ="{{accesorio.id}}" class="btn btn-secondary" id="add-cart">Agregar al carrito</button>
 
                     </div>
-                    
+
                 </div>
             </div>
         {% endfor %}
@@ -51,22 +51,22 @@
                 csrfmiddlewaretoken:'{{ csrf_token }}',
                 action: 'post'
             },
-    
+
             success: function(json){
                 console.log(json)
             },
             error: function(xhr, errmsg,err){
-    
+
             }
-    
-    
+
+
         });
-    
-    
+
+
     })
-    
-    
-    
+
+
+
     </script>
 
 
